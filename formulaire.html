@@ -7,33 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire d'inscription</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>Formulaire d'inscription</h1>
+    <p class="description">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
     <form>
         <fieldset class="infoperso">
             <legend>Informations personnelles</legend>
 
             <div>
-                <label for="prenom">Prénom<span>*</span> :</label>
+                <label for="prenom">Prénom&nbsp;<span>*</span>&nbsp;</label>
                 <input type="text" name="prenom" id="prenom" placeholder="Insérez votre prénom" required>
             </div>
 
             <div>
-                <label for="nom">Nom<span>*</span> :</label>
+                <label for="nom">Nom&nbsp;<span>*</span>&nbsp;</label>
                 <input type="text" name="nom" id="nom" placeholder="Insérez votre nom" required>
             </div>
 
             <div>
-                <label for="age">Age<span>*</span> :</label>
+                <label for="age">Age&nbsp;<span>*</span>&nbsp;</label>
                 <input type="number" name="age" id="age" value="18" max="120" min="18" required>
             </div>
 
 
-            <div>
-                <p>Sexe :</p>
+            <div class="radio">
+                <p>Sexe &nbsp;</p>
                 <label for="femme">Femme</label>
                 <input type="radio" name="sexe" id="femme" value="femme">
                 <label for="homme">Homme</label>
@@ -43,7 +44,7 @@
             </div>
 
             <div>
-                <label for="metier">Métier exercé :</label>
+                <label for="metier">Métier exercé &nbsp;</label>
                 <select name="metier" id="metier">
                     <option value="developpeur">Développeur.se</option>
                     <option value="commercial">Commercial.e web</option>
@@ -56,9 +57,9 @@
             </div>
 
             <div>
-                <label for="nationalite">Nationalité:</label>
-                <select name="nationalite" id="nationalite">
-                    <option value="France" selected="selected">Française (France)</option>
+                <label for="nationalite">Nationalité<span>*</span>&nbsp;</label>
+                <select name="nationalite" id="nationalite" required>
+                    <option value="" selected="selected">&nbsp;</option>
                     <option value="AFG">Afghane (Afghanistan)</option>
                     <option value="ALB">Albanaise (Albanie)</option>
                     <option value="DZA">Algérienne (Algérie)</option>
@@ -260,7 +261,7 @@
             </div>
 
             <div>
-                <label for="pays">Pays de naissance :</label>
+                <label for="pays">Pays de naissance&nbsp;</label>
                 <select name="pays" id="pays">
                     <option value="France" selected="selected">France </option>
                     <option value="Afghanistan">Afghanistan </option>
@@ -495,14 +496,14 @@
             </div>
 
             <div>
-                <label for="naissance">Date de naissance<span>*</span> :</label>
+                <label for="naissance">Date de naissance&nbsp;<span>*</span>&nbsp;</label>
                 <input type="date" name="naissance" id="naissance" value="2005-01-01" max="2005-01-01" min="1903-01-01"
                     required>
             </div>
 
 
             <div>
-                <label for="secu">Numéro de sécurité sociale :</label>
+                <label for="secu">Numéro de sécurité sociale&nbsp;</label>
                 <input type="text" name="secu" id="secu" placeholder="Numéro de sécurité sociale" maxlength="15"
                     minlength="15"
                     pattern="[12][ \.\-]?[0-9]{2}[ \.\-]?(0[1-9]|[1][0-2])[ \.\-]?([0-9]{2}|2A|2B)[ \.\-]?[0-9]{3}[ \.\-]?[0-9]{3}[ \.\-]?[0-9]{2}">
@@ -510,31 +511,31 @@
 
 
             <div>
-                <label for="passeport">Numéro du passeport :</label>
+                <label for="passeport">Numéro du passeport&nbsp;</label>
                 <input type="text" name="passeport" id="passeport" placeholder="Numéro de passeport" maxlength="9"
                     minlength="9" pattern="([0-9]){2} ([a-z]){2} ([0-9]){5}">
             </div>
 
             <div>
-                <label for="datepasseport">Date de délivrance du passeport :</label>
+                <label for="datepasseport">Date de délivrance du passeport&nbsp;</label>
                 <input type="date" name="datepasseport" id="datepasseport" min="1903-01-01" max="2023-12-31"
                     value="2023-02-01">
             </div>
 
 
             <div>
-                <label for="validpasseport">Date de validité du passeport :</label>
+                <label for="validpasseport">Date de validité du passeport&nbsp;</label>
                 <input type="date" name="validpasseport" id="validpasseport" min="2013-01-01" max="2033-12-31"
                     value="2023-02-01">
             </div>
 
             <div>
-                <label for="photoid">Photo d'identité :</label>
+                <label for="photoid">Photo d'identité&nbsp;</label>
                 <input type="file" name="photoid" id="photoid">
             </div>
 
             <div>
-                <label for="photopasseport">Photo du passeport :</label>
+                <label for="photopasseport">Photo du passeport&nbsp;</label>
                 <input type="file" name="photopasseport" id="photopasseport">
             </div>
         </fieldset>
@@ -542,28 +543,28 @@
         <fieldset class="contact">
             <legend>Contact</legend>
             <div>
-                <label for="email">Email<span>*</span> :</label>
+                <label for="email">Email&nbsp;<span>*</span>&nbsp;</label>
                 <input type="email" name="email" id="email" placeholder="Insérez votre adresse mail" required>
             </div>
 
             <div>
-                <label for="adresse">Adresse postale<span>*</span> :</label>
+                <label for="adresse">Adresse postale&nbsp;<span>*</span>&nbsp;</label>
                 <input type="text" name="adresse" id="adresse" placeholder="Insérez l'adresse postale" required>
             </div>
 
             <div>
-                <label for="codepostal">Code postal<span>*</span> :</label>
+                <label for="codepostal">Code postal&nbsp;<span>*</span>&nbsp;</label>
                 <input type="text" name="codepostal" id="codepostal" placeholder="Insérez votre code postal"
                     pattern="([A-Z]+[A-Z]?\-)?[0-9]{1,2} ?[0-9]{3}" minlength="5" maxlength="5" required>
             </div>
 
             <div>
-                <label for="ville">Ville<span>*</span> :</label>
+                <label for="ville">Ville&nbsp;<span>*</span>&nbsp;</label>
                 <input type="text" name="ville" id="ville" placeholder="Insérez votre ville" maxlength="50" required>
             </div>
 
             <div>
-                <label for="fixe">Téléphone fixe<span>*</span> :</label>
+                <label for="fixe">Téléphone fixe&nbsp;<span>*</span>&nbsp;</label>
                 <input type="tel" name="fixe" id="fixe" placeholder="Insérez le téléphone fixe" minlength="10"
                     maxlength="10"
                     pattern="(01|02|03|04|05|06|07|08|09)[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}"
@@ -571,7 +572,7 @@
             </div>
 
             <div>
-                <label for="mobile">Téléphone mobile<span>*</span> :</label>
+                <label for="mobile">Téléphone mobile&nbsp;<span>*</span>&nbsp;</label>
                 <input type="tel" name="mobile" id="mobile" placeholder="Insérez le téléphone mobile" minlength="10"
                     maxlength="10"
                     pattern="(01|02|03|04|05|06|07|08|09)[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}"
@@ -579,13 +580,13 @@
             </div>
 
             <div>
-                <p>Des suggestions?</p>
+                <p>Des choses en plus à nous dire?</p>
                 <textarea name="suggest" id="suggest" cols="30" rows="10" placeholder="Ecrivez ici"></textarea>
             </div>
         </fieldset>
 
         <div class="valid">
-            <label class="check" for="check">CGU</label>
+            <p class="description">Je certifie exactes les informations renseignées dans les champs ci-dessus et conforme à chaque libellé</p>
             <input type="checkbox" name="check" id="check">
             <button type="submit">Valider</button>
         </div>
